@@ -25,5 +25,6 @@ async def ohk(message):
   user = message.from_user.id
   if message.sender_chat:
     await message.reply_text(
-      text=f'**Banning** ({user})\n\n**Reason: `It was an channel`',
+      text=f'**Banning** ({user})\n\n**Reason: `It was an channel`'
+    )
       
