@@ -19,3 +19,11 @@ I can kick the user who is sending msg anonymously in the chat'''
     text=START_PM,
     reply_markup=InlineKeyboardMarkup(START_BUT),
   )
+
+@Client.on_message(filters.private & filters.incoming)
+async def ohk(message):
+  user = message.from_user.id
+  if user is message.sender_chat:
+    await message.reply_text(
+      text=f'**Banning** ({user})\n\n**Reason: `It was an channel`',
+      
