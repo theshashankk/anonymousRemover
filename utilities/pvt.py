@@ -3,7 +3,7 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 @Client.on_message(filters.command('start'))
-async def startc(message):
+async def startc(message, m):
   #god = int(os.environ.get('OWNER_ID'))
   #god_username = os.environ.get('OWNER_USERNAME')
   START_PM = '''
