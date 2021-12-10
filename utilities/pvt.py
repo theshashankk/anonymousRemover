@@ -4,8 +4,8 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 @Client.on_message(filters.command('start'))
 async def startc(message):
-  god = int(os.environ.get('OWNER_ID'))
-  god_username = os.environ.get('OWNER_USERNAME')
+  #god = int(os.environ.get('OWNER_ID'))
+  #god_username = os.environ.get('OWNER_USERNAME')
   START_PM = '''
 **Hey!!**
 __I'm anti anonymous bot__,
