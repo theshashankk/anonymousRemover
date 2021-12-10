@@ -21,7 +21,7 @@ I can kick the user who is sending msg anonymously in the chat'''
   )
 
 @Client.on_message(filters.private & filters.incoming)
-async def ohk(message):
+async def ohk(message, m):
   user = message.from_user.id
   if message.sender_chat:
     await message.reply_text(
