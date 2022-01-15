@@ -15,14 +15,14 @@ I can kick the user who is sending msg anonymously in the chat'''
       InlineKeyboardButton('🗿 Summon me in chat', url='')
     ]
   ]
-  await message.reply_text(
+  await Client.reply_text(
     text=START_PM,
     reply_markup=InlineKeyboardMarkup(START_BUT),
   )
 
 @Client.on_message(filters.private & filters.incoming)
 async def ohk(message, m):
-  user = message.from_user.id
+  user = m.from_user.id
   if Client.sender_chat:
     await Client.reply_text(
       text=f'**Banning** ({user})\n\n**Reason: `It was an channel`'
